@@ -17,3 +17,27 @@ Sample: python3 decision_tree.py DatapracRStudio.xlsx DatapracCodebook.xlsx DP54
 
 Optional: You may follow this with a list of independent variables that the tree will consider when it makes the tree
 Sample: python3 decision_tree.py DatapracRStudio.xlsx DatapracCodebook.xlsx DP54 DP1 DP2 DP3 DP5
+
+Sample Output:
+
+python3 decision_tree.py DatapracRStudio.xlsx DatapracCodebook.xlsx DP54 DP1 DP5    
+Biological sex: 
+		1 male: Education: 
+				1 less than high school: 5.8: closer to there should be greater incentives for individual effort
+				4 2-year degree: 6.021739130434782: closer to there should be greater incentives for individual effort
+				5 4-year degree: 6.616071428571429: closer to there should be greater incentives for individual effort
+				3 some college: 6.6231884057971016: closer to there should be greater incentives for individual effort
+				8 Professional (JD/MD): 6.7272727272727275: closer to there should be greater incentives for individual effort
+				2 high school/GED: 6.7625: closer to there should be greater incentives for individual effort
+				6 Masters: 6.927536231884058: closer to there should be greater incentives for individual effort
+				7 Doctorate: 7: closer to there should be greater incentives for individual effort
+
+		2 female: Education: 
+				1 less than high school: 3.7142857142857144: closer to incomes should be more equal 
+				2 high school/GED: 5.290909090909091: closer to incomes should be more equal 
+				3 some college: 5.6138613861386135: closer to there should be greater incentives for individual effort
+				5 4-year degree: 5.872093023255814: closer to there should be greater incentives for individual effort
+				6 Masters: 6: closer to there should be greater incentives for individual effort
+				4 2-year degree: 6.205128205128205: closer to there should be greater incentives for individual effort
+				8 Professional (JD/MD): 6.636363636363637: closer to there should be greater incentives for individual effort
+				7 Doctorate: 7.090909090909091: closer to there should be greater incentives for individual effort
