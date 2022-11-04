@@ -688,8 +688,10 @@ def parse_command_line(command_line) -> None:
         DV = command_line[2] #Name of the dependent_variable
     except(IndexError):
         raise IndexError("Please provide input in the format decision_tree.py Dataset_File DV_Name Codebook_file Codebook_collumn_with_Variable_types_index")
-
-    data = pd.ExcelFile(file) #data friom the excel file, raw pandas excel file
+    try:
+        data = pd.ExcelFile(file) #data friom the excel file, raw pandas excel file
+    except(FileNotFoundError):
+        raise FileNotFoundError("Filename for Excel data sheet isn't valid, please input the correct file")
     individuals_list = data.parse().to_numpy() #list of individuals in numpy format, basically list of the rows of the data
     codebook = Codebook(codebook_file)
     individuals = make_individuals_list(individuals_list)
