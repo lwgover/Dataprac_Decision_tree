@@ -20,6 +20,7 @@ Sample: python3 decision_tree.py DatapracRStudio.xlsx DatapracCodebook.xlsx DP54
 
 Sample Output:
 
+```
 python3 decision_tree.py DatapracRStudio.xlsx DatapracCodebook.xlsx DP54 DP1 DP5    
 Biological sex: 
 		1 male: Education: 
@@ -41,3 +42,4 @@ Biological sex:
 				4 2-year degree: 6.205128205128205: closer to there should be greater incentives for individual effort
 				8 Professional (JD/MD): 6.636363636363637: closer to there should be greater incentives for individual effort
 				7 Doctorate: 7.090909090909091: closer to there should be greater incentives for individual effort
+```
