@@ -18,7 +18,7 @@ Sample: python3 decision_tree.py DatapracRStudio.xlsx DatapracCodebook.xlsx DP54
 Optional: You may follow this with a list of independent variables that the tree will consider when it makes the tree
 Sample: python3 decision_tree.py DatapracRStudio.xlsx DatapracCodebook.xlsx DP54 DP1 DP2 DP3 DP5
 
-Sample Output:
+Sample Interaction:
 
 ```
 python3 decision_tree.py DatapracRStudio.xlsx DatapracCodebook.xlsx DP54 DP1 DP5    
