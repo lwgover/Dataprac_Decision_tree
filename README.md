@@ -2,7 +2,7 @@
 Through data from American responses to the World Values Survey, I construct a decision tree for a given dependent variable.
 
 This program constructs a Decision Tree / Regression Tree from a spreadsheet and code book. The included Spreadsheet and Codebook come from the Dataprac: data from the World Values Survey limited to Americans and only certain political science questions to construct a regression tree.
-This tree is formed through a modified version of Iterative Dichotomiser 3 (ID3). Due to the program’s variable structure, it constructs a Regression tree for Ordinal and Ratio type questions, and a Decision tree for Nominal type questions.
+This tree is formed through a modified version of Iterative Dichotomiser 3 (ID3). Due to the variety of data types asked for in questions, the program constructs a Regression tree for Ordinal and Ratio type questions, and a Decision tree for Nominal type questions.
 
 
 Algorithm: Modified ID3
