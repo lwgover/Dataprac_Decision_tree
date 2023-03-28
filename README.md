@@ -5,7 +5,7 @@ This program constructs a Decision Tree / Regression Tree from a spreadsheet and
 This tree is formed through a modified version of Iterative Dichotomiser 3 (ID3). Due to the variety of data types asked for in questions, the program constructs a Regression tree for Ordinal and Ratio type questions, and a Decision tree for Nominal type questions.
 
 
-##Algorithm: 
+## Algorithm: 
 ```
 Modified ID3
 
@@ -15,7 +15,7 @@ Find the question that, if split by it, most reduces entropy / variance
 split individuals into 2 or more groups based on their response to that question recursively do this for each sub-group, until there is no information gained / variance lost
 ```
 
-##Usage: 
+## Usage: 
 The command line takes 3 required arguments, data file, codebook file, and a Dependent Variable’s dataprac number
 Sample: `python3 decision_tree.py DatapracRStudio.xlsx DatapracCodebook.xlsx DP54`
 
