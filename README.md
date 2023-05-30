@@ -47,3 +47,5 @@ Biological sex:
 				8 Professional (JD/MD): 6.636363636363637: closer to there should be greater incentives for individual effort
 				7 Doctorate: 7.090909090909091: closer to there should be greater incentives for individual effort
 ```
+
+This implementation is currently too slow to run on large datasets like the full World Values Survey, but I plan to optimize it, and rewrite it as a multi-threaded `c` program.
