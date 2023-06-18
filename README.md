@@ -1,4 +1,4 @@
-# Dataprac_Decision_tree
+# Dataprac Decision Tree
 Through data from American responses to the World Values Survey, I construct a decision tree for a given dependent variable.
 
 This program constructs a Decision Tree / Regression Tree from a spreadsheet and code book. The included Spreadsheet and Codebook come from the Dataprac: data from the World Values Survey limited to Americans and only certain political science questions to construct a regression tree.
@@ -48,4 +48,4 @@ Biological sex:
 				7 Doctorate: 7.090909090909091: closer to there should be greater incentives for individual effort
 ```
 
-This implementation is currently too slow to run on large datasets like the full World Values Survey, but I plan to optimize it, and rewrite it as a multi-threaded `c` program.
+This implementation is currently too slow to run on large datasets like the full World Values Survey, but I plan to optimize it and rewrite it as a multi-threaded `c` program at some point in the future.
