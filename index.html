@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Identity & Political Views</title>
+		<script type="text/javascript" src="./d3.js"></script>
+		<style type="text/css">
+			svg{
+				padding: 0%;
+			}
+			text {
+				background-color: blue;
+				fill: white;
+				font-size: 72pt;
+				text-align: center;
+				text-anchor: middle;
+				pointer-events: none;
+			}
+			body {
+				background-color:black;
+				margin: 0; 
+				height: 100%; 
+				overflow: hidden
+			}
+
+			line {
+				pointer-events: none;
+			}
+
+			#tooltip {
+                position: absolute;
+                width: 200px;
+                height: auto;
+                padding: 10px;
+                background-color: white;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                border-radius: 10px;
+                -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+                -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+                pointer-events: none;
+            }
+            
+            #tooltip.hidden {
+                display: none;
+            }
+            
+            #tooltip p {
+                margin: 0;
+                font-family: sans-serif;
+                font-size: 16px;
+                line-height: 20px;
+            }
+
+            #tooltip #genres {
+            	font-size: 9px;
+            }
+            #blur {
+                filter: blur(2px);
+            }
+		</style>
+	</head>
+	<body>
+		<div id="tooltip" class="hidden">
+			<p><span id="name">Movie Title</span><br/><span id="genres" style="color:gray">Movie Genres</span></p>
+		</div>
+		<script type="text/javascript" src="better_graph_visualization.js"></script>
+	</body>
+</html>
