@@ -1,0 +1,117 @@
+{
+    "classification": "5.919902912621359",
+    "variable_description": "Biological sex",
+    "classificaiton_meaning": "closer to there should be greater incentives for individual effort",
+    "children": [
+        {
+            "classification": "1",
+            "variable_description": "Education",
+            "classificaiton_meaning": "incomes should be more equal ",
+            "children": [
+                {
+                    "classification": "3.6",
+                    "variable_description": "None",
+                    "classificaiton_meaning": "closer to incomes should be more equal ",
+                    "children": []
+                },
+                {
+                    "classification": "4.894736842105263",
+                    "variable_description": "None",
+                    "classificaiton_meaning": "closer to incomes should be more equal ",
+                    "children": []
+                },
+                {
+                    "classification": "5.097087378640777",
+                    "variable_description": "None",
+                    "classificaiton_meaning": "closer to incomes should be more equal ",
+                    "children": []
+                },
+                {
+                    "classification": "5.526315789473684",
+                    "variable_description": "None",
+                    "classificaiton_meaning": "closer to there should be greater incentives for individual effort",
+                    "children": []
+                },
+                {
+                    "classification": "5.681318681318682",
+                    "variable_description": "None",
+                    "classificaiton_meaning": "closer to there should be greater incentives for individual effort",
+                    "children": []
+                },
+                {
+                    "classification": "6.108695652173913",
+                    "variable_description": "None",
+                    "classificaiton_meaning": "closer to there should be greater incentives for individual effort",
+                    "children": []
+                },
+                {
+                    "classification": "6.181818181818182",
+                    "variable_description": "None",
+                    "classificaiton_meaning": "closer to there should be greater incentives for individual effort",
+                    "children": []
+                },
+                {
+                    "classification": "7.555555555555555",
+                    "variable_description": "None",
+                    "classificaiton_meaning": "closer to there should be greater incentives for individual effort",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "classification": "10",
+            "variable_description": "Education",
+            "classificaiton_meaning": "there should be greater incentives for individual effort",
+            "children": [
+                {
+                    "classification": "4.833333333333333",
+                    "variable_description": "None",
+                    "classificaiton_meaning": "closer to incomes should be more equal ",
+                    "children": []
+                },
+                {
+                    "classification": "5.979591836734694",
+                    "variable_description": "None",
+                    "classificaiton_meaning": "closer to there should be greater incentives for individual effort",
+                    "children": []
+                },
+                {
+                    "classification": "6.267441860465116",
+                    "variable_description": "None",
+                    "classificaiton_meaning": "closer to there should be greater incentives for individual effort",
+                    "children": []
+                },
+                {
+                    "classification": "6.508620689655173",
+                    "variable_description": "None",
+                    "classificaiton_meaning": "closer to there should be greater incentives for individual effort",
+                    "children": []
+                },
+                {
+                    "classification": "6.5396825396825395",
+                    "variable_description": "None",
+                    "classificaiton_meaning": "closer to there should be greater incentives for individual effort",
+                    "children": []
+                },
+                {
+                    "classification": "6.704918032786885",
+                    "variable_description": "None",
+                    "classificaiton_meaning": "closer to there should be greater incentives for individual effort",
+                    "children": []
+                },
+                {
+                    "classification": "7",
+                    "variable_description": "None",
+                    "classificaiton_meaning": "closer to there should be greater incentives for individual effort",
+                    "children": []
+                },
+                {
+                    "classification": "7.125",
+                    "variable_description": "None",
+                    "classificaiton_meaning": "closer to there should be greater incentives for individual effort",
+                    "children": []
+                }
+            ]
+        }
+    ]
+}

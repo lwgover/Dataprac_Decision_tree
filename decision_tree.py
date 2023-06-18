@@ -721,11 +721,9 @@ def parse_command_line(command_line) -> None:
     prune_tree(tree,tuning,DV_index,DV_type)
     tree.limit_depth(5) # limits the tree depth for added readability, can be deleted with no negative consequences
     tree.print_tree(0)
+    return tree
     
     #print(tree.classify(individuals[0]))
-
-
-
 
 #===============================================================================================================================================================
 if __name__ == "__main__":
