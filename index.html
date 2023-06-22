@@ -17,7 +17,7 @@
 				pointer-events: none;
 			}
 			body {
-				background-color:black;
+				background-color:rgb(255, 255, 255);
 				margin: 0; 
 				height: 100%; 
 				overflow: hidden
@@ -59,9 +59,59 @@
             #blur {
                 filter: blur(2px);
             }
+            .loader {
+                border: 16px solid #f3f3f3; /* Light grey */
+                border-top: 16px solid #3498db; /* Blue */
+                border-radius: 50%;
+                width: 120px;
+                height: 120px;
+                animation: spin 2s linear infinite;
+              }
+              
+              @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+              }
+              
+              .container {
+                width: 300px;
+                height: 100px;
+                position: relative;
+                margin: 100px auto;
+                border-radius: 50px;
+                border: 3px dotted #eee;
+                text-align: center;
+                font-family: sans-serif;
+                padding-top: 10px;
+              }
+              .dot {
+                position: absolute;
+                background: black;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                transform: rotate(0deg);
+                top: 25px;
+                left: 25px;
+                opacity: 0.1;
+                transition: all 0.75s cubic-bezier(.71,0,.33,1.56) 0ms;
+              }
+        
+              .container:hover .dot {
+                transform: rotate(360deg);
+                border-radius: 0%;
+                left: 225px;
+                background: pink;
+              }
+              
 		</style>
 	</head>
 	<body>
+        <div class="container">
+            Hover / Tap
+            <div class="dot"></div>
+          </div>
+        <div class="loader"></div>
 		<div id="tooltip" class="hidden">
 			<p><span id="name">Movie Title</span><br/><span id="genres" style="color:gray">Movie Genres</span></p>
 		</div>

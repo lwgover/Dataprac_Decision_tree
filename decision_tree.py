@@ -719,12 +719,12 @@ def parse_command_line(command_line) -> None:
         tree = make_ordinal_decision_tree(training,codebook,DV_index,individuals[0].responses[DV_index])
     
     prune_tree(tree,tuning,DV_index,DV_type)
-    tree.limit_depth(5) # limits the tree depth for added readability, can be deleted with no negative consequences
-    tree.print_tree(0)
+    #tree.limit_depth(5) # limits the tree depth for added readability, can be deleted with no negative consequences
     return tree
     
     #print(tree.classify(individuals[0]))
 
 #===============================================================================================================================================================
 if __name__ == "__main__":
-    parse_command_line(sys.argv[1:])
+    tree = parse_command_line(sys.argv[1:])
+    tree.print_tree(0)
