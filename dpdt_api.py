@@ -14,11 +14,15 @@ def tree_to_dict(tree:dt.Decision_Tree):
     return tree_dict
 
 def getTreeDict(IV:str, DVs:list = ['DP1', 'DP5']):
-    tree = dt.parse_command_line(['DatapracRStudio.xlsx', 'DatapracCodebook.xlsx'] + [IV] + DVs)
+    tree = dt.parse_command_line(['data/DatapracRStudio.xlsx', 'data/DatapracCodebook.xlsx'] + [IV] + DVs)
     return tree_to_dict(tree)
 
 app = Flask(__name__)
 
+@app.route('/tree/',methods=['GET'])
+def tree():
+    return 
+    
 @app.route('/tree/<name>',methods=['GET'])
 def get_tree(name=None):
     if name is None:
@@ -35,6 +39,7 @@ def get_tree(name=None):
     
 @app.route('/info/',methods=['GET'])
 def get_info():
-    return dt.get_codebook('DatapracCodebook.xlsx')
+    return dt.get_codebook('data/DatapracCodebook.xlsx')
 
-app.run()
+if __name__ == '__main__':
+    app.run()
