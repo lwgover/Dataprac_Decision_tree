@@ -279,3 +279,5 @@ yarn-error.log*
 
 fly.toml
 .dockerignore
+Procfile
+requirements.txt
