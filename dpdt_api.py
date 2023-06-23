@@ -19,18 +19,22 @@ def getTreeDict(IV:str, DVs:list = ['DP1', 'DP5']):
 
 app = Flask(__name__)
 
-@app.route('/', methods=['GET'])
-def query_records():
-    query = dict(request.args)
-    print(query)
+@app.route('/tree/<name>',methods=['GET'])
+def get_tree(name=None):
+    if name is None:
+       return jsonify({'error': 'Please provide data labels to make tree from'}) 
+    print(name)
+    query = name.split(',')
     try:
-        IV = query['independent_variable']
-        DVs = query['dependent_variables']
-        return jsonify(getTreeDict(IV,DVs.split(',')))
+        IV = query[0]
+        DVs = query[1:]
+        return jsonify(getTreeDict(IV,DVs))
     except Exception as e:
         print(e)
         return jsonify({'error': 'data not found'})
     
-    
+@app.route('/info/',methods=['GET'])
+def get_info():
+    return dt.get_codebook('DatapracCodebook.xlsx')
 
 app.run()

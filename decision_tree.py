@@ -666,6 +666,14 @@ def make_individuals_list(individuals_list):
         individuals.append(Individual(ind))
     return individuals
 
+def get_codebook(codebook_file):
+    codebook = Codebook(codebook_file)
+    info_dict = {}
+    for i in codebook.descriptions:
+        info_dict[i["question_label"]] = i["dataprac_number"]
+    return info_dict
+    
+
 def print_help():
     print("This program uses the format:")
     print("\tdecision_tree [Data File] [Codebook File] [DV_Name]")
