@@ -22,20 +22,26 @@ app = Flask(__name__)
 @app.route('/tree/<name>',methods=['GET'])
 def get_tree(name=None):
     if name is None:
-       return jsonify({'error': 'Please provide data labels to make tree from'}) 
+        return jsonify({'error': 'Please provide data labels to make tree from'}) 
     print(name)
     query = name.split(',')
     try:
         IV = query[0]
         DVs = query[1:]
-        return jsonify(getTreeDict(IV,DVs))
+
+        resp = jsonify(getTreeDict(IV,DVs))  #Binds data to a response object  
+        # Set the Access Control Allow heades  
+        resp.headers['Access-Control-Allow-Origin'] = '*'   # Allows cross origin requests
+        return resp # Return response with Access Control Allow Headers 
+
     except Exception as e:
         print(e)
         return jsonify({'error': 'data not found'})
     
 @app.route('/info/',methods=['GET'])
 def get_info():
-    return dt.get_codebook('data/DatapracCodebook.xlsx')
 
-if __name__ == '__main__':
-    app.run()
+    resp = jsonify(dt.get_codebook('data/DatapracCodebook.xlsx'))  #Binds data to a response object  
+    # Set the Access Control Allow heades  
+    resp.headers['Access-Control-Allow-Origin'] = '*'   # Allows cross origin requests
+    return resp
