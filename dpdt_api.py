@@ -19,10 +19,6 @@ def getTreeDict(IV:str, DVs:list = ['DP1', 'DP5']):
 
 app = Flask(__name__)
 
-@app.route('/tree/',methods=['GET'])
-def tree():
-    return 
-    
 @app.route('/tree/<name>',methods=['GET'])
 def get_tree(name=None):
     if name is None:
