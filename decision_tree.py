@@ -211,6 +211,7 @@ class Decision_Tree:
         if 'Ordinal' in self.DV_type or 'Ratio' in self.DV_type:
             responses = map(lambda ind: ind.responses[self.DV_index],self.individuals)
             return statistics.mean(responses)
+        return statistics.mean(responses)
 
     def print_tree(self, depth):
         """
@@ -268,7 +269,7 @@ def make_nominal_decision_tree(individuals:list, codebook:Codebook, DV_index, pa
             best_variable = i
 
     if best_information_gain <= 0:
-        return Decision_Tree(individuals,parent_majority,DV_type = codebook.get_datatype_of_variable(DV_index),DV_index = DV_index,codebook = codebook)
+        return Decision_Tree(individuals,parent_majority,DV_type = "Nominal",DV_index = DV_index,codebook = codebook)
 
     new_parents_majority = most_common_response(individuals,DV_index)
 
@@ -333,7 +334,7 @@ def make_ordinal_decision_tree(individuals:list, codebook:Codebook, DV_index, pa
             best_variable = i
 
     if total_variance <= best_variance:
-        return Decision_Tree(individuals,parent_majority,DV_type = codebook.get_datatype_of_variable(DV_index),DV_index = DV_index,codebook = codebook)
+        return Decision_Tree(individuals,parent_majority,DV_type = "Ordinal",DV_index = DV_index,codebook = codebook)
 
     new_parents_majority = most_common_response(individuals,DV_index)
 
@@ -347,7 +348,7 @@ def make_ordinal_decision_tree(individuals:list, codebook:Codebook, DV_index, pa
             classification = i[0]
             classifier_description = str(i[0])
             meaning_of_split = codebook.get_meaning_of_number(best_variable,i[0])
-            sub_tree = make_nominal_decision_tree(i[1],codebook,DV_index,new_parents_majority)
+            sub_tree = make_ordinal_decision_tree(i[1],codebook,DV_index,new_parents_majority)
             branch = (classification,classifier_description,meaning_of_split,sub_tree)
         if 'Ordinal' in IV_type or 'Ratio' in IV_type:
             if first:
@@ -359,7 +360,7 @@ def make_ordinal_decision_tree(individuals:list, codebook:Codebook, DV_index, pa
                 classification = i[0]
                 classifier_description = ">= " + str(i[0])
                 meaning_of_split = get_ordinal_meaining(codebook,best_variable,i[0],False)
-            sub_tree = make_nominal_decision_tree(i[1],codebook,DV_index,new_parents_majority)
+            sub_tree = make_ordinal_decision_tree(i[1],codebook,DV_index,new_parents_majority)
             branch = (classification,classifier_description,meaning_of_split,sub_tree)
         branches.append(branch)
     return Decision_Tree(individuals,parent_majority,DV_type='Ordinal',DV_index = DV_index,codebook = codebook,variable_description = codebook.get_question(best_variable),is_leaf=False,children=branches,variable_index=best_variable)
